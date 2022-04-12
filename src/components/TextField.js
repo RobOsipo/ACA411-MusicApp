@@ -28,11 +28,11 @@ export default function BasicTextFields() {
       noValidate
       autoComplete="off"
     >
-      <TextField id="outlined-basic" label="Outlined" variant="outlined" />
+      <TextField id="outlined-basic" label="User Name" variant="outlined" />
       <br />
-      <TextField id="outlined-basic" label="Outlined" variant="outlined" />
+      <TextField id="outlined-basic" label="Password" variant="outlined" />
       <br />
-      <Button onClick={login} variant="contained" color="primary">Temporary</Button>
+      <Button onClick={login} variant="contained" color="primary">Log In (:</Button>
     </Box>
   );
 }
