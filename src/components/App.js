@@ -1,6 +1,7 @@
 import React from 'react'
 import NavBar from './NavBar.js'
 import TextField from './TextField.js'
+import './app.css'
 
 
 
@@ -8,7 +9,10 @@ const App = () => {
     return (
        <main>
             <NavBar />
-            <TextField />
+            <div className="form">
+             <TextField />
+
+            </div>
        </main>
     )
 }

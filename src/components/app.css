@@ -1,0 +1,30 @@
+:root {
+    --bg-color: #d1dfe4;
+    --outer-text: rgb(46, 46, 153, 0.5);
+}
+body {
+    background-color: var(--bg-color);
+  
+}
+
+.dashboard-title {
+    color: var(--outer-text);
+    width: 300px;
+    text-align: center;
+    
+    
+}
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: center;
+    align-items: center;
+    border: solid black 1px;
+    width: 20rem;
+}
+.form {
+    padding-left: 40%;
+    padding-top: 1rem;
+}
