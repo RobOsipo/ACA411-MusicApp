@@ -7,6 +7,7 @@ import DashBoard from './DashBoard.js';
 export default function BasicTextFields() {
 
     const [loggedIn, setLoggedIn] = React.useState(false)
+    const [notifications, setNotifications] = React.useState([])
 
     const login = () => {
         setLoggedIn(prevState => !prevState)
@@ -16,7 +17,7 @@ export default function BasicTextFields() {
 
   return loggedIn ? 
   (
-      <DashBoard />
+      <DashBoard notifications={notifications} setNotifications={setNotifications} />
   )
   :
   (

@@ -6,7 +6,10 @@ import './app.css'
 
 
 
-const DashBoard = () => {
+const DashBoard = ({notifications}) => {
+
+    const [newNotifications, setNewNotifications] = React.useState(notifications)
+
     return (
         <>
             <h1 className="dashboard-title">Welcome User</h1>
