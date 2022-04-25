@@ -10,12 +10,11 @@ import Slider from '@mui/material/Slider';
 
 
 
-export default function MediaCard() {
+export default function VolumeCard({ value, setValue }) {
 
-    const [value, setValue] = React.useState(30);
 
-    const handleChange = (event, newValue) => {
-      setValue(newValue);
+    const handleChange = (event) => {
+      setValue(event.target.value);
     };
 
   return (

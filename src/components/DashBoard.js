@@ -6,21 +6,23 @@ import './app.css'
 
 
 
-const DashBoard = ({notifications}) => {
+const DashBoard = ({ online, setOnline, quality, setQuality, value, setValue }) => {
 
-    const [newNotifications, setNewNotifications] = React.useState(notifications)
+    console.log('value', value)
+    const [notifications, setNotifications] = React.useState([])
 
     return (
         <>
             <h1 className="dashboard-title">Welcome User</h1>
+           
             <main className="card-container">
-                <InternetCard />
+                <InternetCard online={online} setOnline={setOnline} />
                 <br />
-                <VolumeCard />
+                <VolumeCard value={value} setValue={setValue} />
                 <br />
-                <SoundQuality />
+                <SoundQuality quality={quality} setQuality={setQuality} />
             </main>
-
+           
         </>
     )
 }

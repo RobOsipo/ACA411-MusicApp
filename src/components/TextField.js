@@ -4,10 +4,11 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import DashBoard from './DashBoard.js';
 
-export default function BasicTextFields() {
+export default function BasicTextFields({ online, setOnline, quality, setQuality, value, setValue }) {
 
     const [loggedIn, setLoggedIn] = React.useState(false)
-    const [notifications, setNotifications] = React.useState([])
+   
+   
 
     const login = () => {
         setLoggedIn(prevState => !prevState)
@@ -16,8 +17,15 @@ export default function BasicTextFields() {
 
 
   return loggedIn ? 
-  (
-      <DashBoard notifications={notifications} setNotifications={setNotifications} />
+  ( 
+      <DashBoard 
+         online={online}
+         setOnline={setOnline}
+         quality={quality}
+         setQuality={setQuality}
+         value={value}
+         setValue={setValue}
+       />
   )
   :
   (

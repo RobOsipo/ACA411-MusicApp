@@ -11,10 +11,11 @@ import Select from '@mui/material/Select';
 
 
 
-export default function MediaCard() {
+export default function SoundQuality({ quality, setQuality }) {
+    
 
     
-        const [quality, setQuality] = React.useState('');
+       
       
         const handleChange = (event) => {
           setQuality(event.target.value);

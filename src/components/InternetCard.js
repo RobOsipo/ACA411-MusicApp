@@ -7,9 +7,9 @@ import Switch from '@mui/material/Switch';
 
 const label = { inputProps: { 'aria-label': 'Switch demo' } };
 
-export default function MediaCard() {
+export default function InternetCard({ online, setOnline }) {
 
-const [online, setOnline] = React.useState(true)
+
 const [warning, setWarning] = React.useState('')
 
 const handleSwitch = () => {
@@ -18,13 +18,6 @@ const handleSwitch = () => {
     if (online === false) {return window.alert('Your application is offline. You wont be able to share or stream music to other devices.')}
 }
 
-const renderNotification = () => {
-  return (
-    <>
-     <p>Your application is offline. You won't be able to share or stream music to other devices.</p>
-    </>
-  )
-}
 
 
 
@@ -41,7 +34,7 @@ const renderNotification = () => {
       </CardContent>
       <CardActions>
       <Switch onClick={handleSwitch} {...label} />
-     <p>{online ? 'Online' : 'Offline'}</p>
+     <p>{!online ? 'Online' : 'Offline'}</p>
       </CardActions>
       
     </Card>

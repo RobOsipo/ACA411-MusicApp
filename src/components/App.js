@@ -6,11 +6,25 @@ import './app.css'
 
 
 const App = () => {
+
+    const [online, setOnline] = React.useState(true)
+    const [quality, setQuality] = React.useState('')
+    const [value, setValue] = React.useState(30);
+
+
     return (
        <main>
             <NavBar />
             <div className="form">
-             <TextField />
+             <TextField 
+                online={online}
+                setOnline={setOnline}
+                quality={quality}
+                setQuality={setQuality}
+                value={value}
+                setValue={setValue}
+
+              />
 
             </div>
        </main>
