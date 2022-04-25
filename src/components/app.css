@@ -29,4 +29,16 @@ body {
     padding-left: 40%;
     padding-top: 1rem;
 }
+.notifications {
+    max-width: 40rem;
+    max-height: 10rem;
+    position: absolute;
+    bottom: 5rem;
+    left: 5rem;
+}
+.notifications-container {
+    max-width: 30rem;
+    max-height: 10rem;
+    overflow: auto;
+}
 

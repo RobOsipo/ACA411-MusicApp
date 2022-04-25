@@ -29,10 +29,10 @@ export default function SoundQuality({ quality, setQuality }) {
     
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          Master Volume
+          Sound Quality
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          Override all other sound settings in this app
+          Manually Control Music Quality
         </Typography>
       </CardContent>
       <CardActions>

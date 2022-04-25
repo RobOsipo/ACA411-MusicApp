@@ -10,12 +10,12 @@ const label = { inputProps: { 'aria-label': 'Switch demo' } };
 export default function InternetCard({ online, setOnline }) {
 
 
-const [warning, setWarning] = React.useState('')
+
 
 const handleSwitch = () => {
   
     setOnline(prevState => !prevState)
-    if (online === false) {return window.alert('Your application is offline. You wont be able to share or stream music to other devices.')}
+
 }
 
 
@@ -34,7 +34,7 @@ const handleSwitch = () => {
       </CardContent>
       <CardActions>
       <Switch onClick={handleSwitch} {...label} />
-     <p>{!online ? 'Online' : 'Offline'}</p>
+     <p>{online ? 'Online' : 'Offline'}</p>
       </CardActions>
       
     </Card>
