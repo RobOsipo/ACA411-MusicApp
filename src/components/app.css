@@ -28,13 +28,16 @@ body {
     padding-left: 40%;
     padding-top: 1rem;
 }
-.notifications {
+.notifs {
     max-width: 40rem;
     max-height: 10rem;
     position: absolute;
     bottom: 3rem;
     left: 6rem;
     font-size: 1.5rem;
+}
+.noti {
+    font-size: 1rem;
 }
 .notifications > ul {
     font-size: 1rem;

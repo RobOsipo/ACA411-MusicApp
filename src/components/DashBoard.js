@@ -10,7 +10,7 @@ const DashBoard = ({ online, setOnline, quality, setQuality, value, setValue }) 
     
     
     const [notifications, setNotifications] = React.useState([])
-    const [changeFlag, setChangeFlag] = React.useState(true)
+    
     
     useEffect(() => {
         
@@ -39,11 +39,11 @@ const DashBoard = ({ online, setOnline, quality, setQuality, value, setValue }) 
                 <SoundQuality quality={quality} setQuality={setQuality}  />
             </main>
        
-
-        <div className="notifications-container">
+        
+        {/* <div className="notifications-container">
             <h4 className="notifications">Notifications: <ul>{notifications.map((noti, index) => {return <li key={index}>{noti}</li>})}</ul></h4>
 
-        </div>
+        </div> */}
      
            
         </>
