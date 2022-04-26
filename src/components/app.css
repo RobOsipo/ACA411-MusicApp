@@ -31,12 +31,20 @@ body {
     max-width: 40rem;
     max-height: 10rem;
     position: absolute;
-    bottom: 2rem;
-    left: 5rem;
+    bottom: 3rem;
+    left: 6rem;
+    font-size: 1.5rem;
+}
+.notifications > ul {
+    font-size: 1rem;
 }
 .notifications-container {
     max-width: 30rem;
     max-height: 10rem;
     overflow: auto;
+}
+.a-card {
+    width: 250px;
+    height: 200px;
 }
 

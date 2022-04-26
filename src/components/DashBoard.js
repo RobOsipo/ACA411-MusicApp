@@ -32,11 +32,11 @@ const DashBoard = ({ online, setOnline, quality, setQuality, value, setValue }) 
             <h1 className="dashboard-title">Welcome User</h1>
            
             <main className="card-container">
-                <InternetCard online={online} setOnline={setOnline} setChangeFlag={setChangeFlag} />
+                <InternetCard online={online} setOnline={setOnline}  />
                 
-                <VolumeCard value={value} setValue={setValue} setChangeFlag={setChangeFlag} />
+                <VolumeCard value={value} setValue={setValue}  />
                
-                <SoundQuality quality={quality} setQuality={setQuality} setChangeFlag={setChangeFlag} />
+                <SoundQuality quality={quality} setQuality={setQuality}  />
             </main>
        
 

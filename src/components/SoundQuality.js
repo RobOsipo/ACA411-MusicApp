@@ -11,23 +11,19 @@ import Select from '@mui/material/Select';
 
 
 
-export default function SoundQuality({ quality, setQuality, setChangeFlag }) {
-    
-
+export default function SoundQuality({ quality, setQuality}) {
     
        
       
-        const handleChange = (event) => {
-          setChangeFlag(prevState => !prevState)
-          setQuality(event.target.value);
-         
-        };
+  const handleChange = (event) => {
+   
+     setQuality(event.target.value);
+          };
       
 
-    
 
   return (
-    <Card sx={{ maxWidth: 245 }}>
+    <Card className="a-card" >
     
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">

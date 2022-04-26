@@ -1,25 +1,22 @@
-import React, {useRef} from 'react';
+import React from 'react';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
-import Stack from '@mui/material/Stack';
 import Slider from '@mui/material/Slider';
-// import VolumeDown from '@mui/icons-material/VolumeDown';
-// import VolumeUp from '@mui/icons-material/VolumeUp';
 
 
 
-export default function VolumeCard({ value, setValue, setChangeFlag }) {
+export default function VolumeCard({ value, setValue }) {
 
 
     const handleChange = (event) => {
-      setChangeFlag(prevState => !prevState)
+     
       setValue(event.target.value);
     };
 
   return (
-    <Card sx={{ maxWidth: 245 }}>
+    <Card className="a-card">
     
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
@@ -30,9 +27,6 @@ export default function VolumeCard({ value, setValue, setChangeFlag }) {
         </Typography>
       </CardContent>
       <CardActions>
-
-  
-     
         
       <Slider
         size="small"
@@ -41,9 +35,6 @@ export default function VolumeCard({ value, setValue, setChangeFlag }) {
         valueLabelDisplay="auto"
         onChange={handleChange}
     />
-       
-   
-     
       </CardActions>
     </Card>
   );
