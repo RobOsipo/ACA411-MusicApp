@@ -1,6 +1,6 @@
 :root {
-    --bg-color: #d1dfe4;
-    --outer-text: rgb(46, 46, 153, 0.5);
+    --bg-color: #e6ecee;
+    --outer-text: rgba(59, 59, 110, 0.5);
 }
 body {
     background-color: var(--bg-color);
@@ -10,6 +10,7 @@ body {
     color: var(--outer-text);
     width: 300px;
     text-align: center;
+    
 }
 
 .card-container {

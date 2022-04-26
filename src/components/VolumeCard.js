@@ -11,7 +11,6 @@ export default function VolumeCard({ value, setValue }) {
 
 
     const handleChange = (event) => {
-     
       setValue(event.target.value);
     };
 

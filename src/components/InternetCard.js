@@ -31,7 +31,7 @@ const handleSwitch = () => {
         </Typography>
       </CardContent>
       <CardActions>
-      <Switch onClick={handleSwitch} {...label} />
+      <Switch onClick={handleSwitch} {...label} defaultChecked />
      <p>{online ? 'Online' : 'Offline'}</p>
       </CardActions>
       
