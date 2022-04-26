@@ -4,6 +4,53 @@ import VolumeCard from './VolumeCard.js'
 import SoundQuality from './SoundQuality.js'
 import './app.css'
 
+
+
+const DashBoard = ({ online, setOnline, quality, setQuality, value, setValue }) => {
+    
+    
+    const [notifications, setNotifications] = React.useState([])
+    const [changeFlag, setChangeFlag] = React.useState(true)
+    
+    useEffect(() => {
+        
+        if (!online) {setNotifications([...notifications, 'Your application is offline. You wont be able to share or stream music to other devices.'])}
+       
+    }, [online]);
+
+    useEffect(() => {
+        if (quality === 'low') {setNotifications([...notifications, 'Music quality is degraded. Increase quality if your connection allows it.'])}
+    }, [quality])
+
+    useEffect(() => {
+        if (value === 80) {setNotifications([...notifications, 'Listening to music at a high volume could cause long-term hearing loss.'])}
+    }, [value])
+    
+
+    return (
+        <>
+            <h1 className="dashboard-title">Welcome User</h1>
+           
+            <main className="card-container">
+                <InternetCard online={online} setOnline={setOnline} setChangeFlag={setChangeFlag} />
+                
+                <VolumeCard value={value} setValue={setValue} setChangeFlag={setChangeFlag} />
+               
+                <SoundQuality quality={quality} setQuality={setQuality} setChangeFlag={setChangeFlag} />
+            </main>
+       
+
+        <div className="notifications-container">
+            <h4 className="notifications">Notifications: <ul>{notifications.map((noti, index) => {return <li key={index}>{noti}</li>})}</ul></h4>
+
+        </div>
+     
+           
+        </>
+    )
+}
+
+export default DashBoard
 // class DashBoard extends React.Component {
 
 //     state = { notifications: [] }
@@ -42,45 +89,3 @@ import './app.css'
 //                 )
 //     }
 // }
-
-
-const DashBoard = ({ online, setOnline, quality, setQuality, value, setValue }) => {
-
-    
-    const [notifications, setNotifications] = React.useState([])
-
-    useEffect(() => {
-
-        if (!online) {setNotifications([...notifications, 'Your application is offline. You wont be able to share or stream music to other devices.'])}
-        
-        if (quality === 'low') {setNotifications([...notifications, 'Music quality is degraded. Increase quality if your connection allows it.'])}
-       
-        if (value >= 80) {setNotifications([...notifications, 'Listening to music at a high volume could cause long-term hearing loss.'])}
-    
-    }, [online, quality, value])
-
-
-    return (
-        <>
-            <h1 className="dashboard-title">Welcome User</h1>
-           
-            <main className="card-container">
-                <InternetCard online={online} setOnline={setOnline} />
-                <br />
-                <VolumeCard value={value} setValue={setValue} />
-                <br />
-                <SoundQuality quality={quality} setQuality={setQuality} />
-            </main>
-       
-
-        <div className="notifications-container">
-            <h4 className="notifications">Notifications: <ul>{notifications.map((noti, index) => {return <li key={index}>{noti}</li>})}</ul></h4>
-
-        </div>
-     
-           
-        </>
-    )
-}
-
-export default DashBoard

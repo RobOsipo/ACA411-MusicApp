@@ -11,14 +11,16 @@ import Select from '@mui/material/Select';
 
 
 
-export default function SoundQuality({ quality, setQuality }) {
+export default function SoundQuality({ quality, setQuality, setChangeFlag }) {
     
 
     
        
       
         const handleChange = (event) => {
+          setChangeFlag(prevState => !prevState)
           setQuality(event.target.value);
+         
         };
       
 

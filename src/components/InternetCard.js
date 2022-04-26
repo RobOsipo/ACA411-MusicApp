@@ -7,19 +7,17 @@ import Switch from '@mui/material/Switch';
 
 const label = { inputProps: { 'aria-label': 'Switch demo' } };
 
-export default function InternetCard({ online, setOnline }) {
+export default function InternetCard({ online, setOnline, setChangeFlag }) {
 
-
+ 
 
 
 const handleSwitch = () => {
   
     setOnline(prevState => !prevState)
+    setChangeFlag(prevState => !prevState)
 
 }
-
-
-
 
   return (
     <Card sx={{ maxWidth: 245 }}>

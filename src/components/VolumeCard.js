@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, {useRef} from 'react';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
@@ -10,10 +10,11 @@ import Slider from '@mui/material/Slider';
 
 
 
-export default function VolumeCard({ value, setValue }) {
+export default function VolumeCard({ value, setValue, setChangeFlag }) {
 
 
     const handleChange = (event) => {
+      setChangeFlag(prevState => !prevState)
       setValue(event.target.value);
     };
 
